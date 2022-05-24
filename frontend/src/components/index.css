@@ -1,0 +1,20 @@
+
+
+
+.index-btns {
+	text-align: center;
+	margin-top: 15%;
+	
+}
+
+.index-btn {
+	display: inline-block;
+	
+}
+
+.create-room-btn {
+	margin-right: 2%;
+}
+
+.join-room-btn {
+}

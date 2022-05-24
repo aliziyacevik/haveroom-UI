@@ -1,0 +1,12 @@
+.index-btns {
+	text-align: center;
+}
+
+
+.index-btn {
+	display: inline-block;
+
+	margin-left: 2%;
+	margin-top: 10%;
+}
+

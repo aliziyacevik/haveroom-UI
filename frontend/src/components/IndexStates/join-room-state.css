@@ -1,16 +1,25 @@
-.index-state-two {
+.join-room-state {
 	text-align: center;
+	#margin-left: 50%;
 }
 
 .find-room {
-	#margin-top: 5%;
+	text-align: center;
+	margin-top: 5%;
+}
+
+.find-room > div {
+	display: inline-block;
+}
+
+.go-button {
+	margin-left:2%;
 }
 
 
 .join-room-path {
 	width: 20%;
 	margin: auto;
-	display: inline-block;
 	
 }
 

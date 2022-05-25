@@ -11,14 +11,12 @@ function IndexButtons (props) {
 		
 		 <div className ="index-btns">
 			 <CreateRoomButton 
-				currentState={props.currentCreateState}
-				onClick={props.createRoomHandler}
+				onClick={props.onClick}
 			 	> 
 			 </CreateRoomButton> 
 			 
 			<JoinRoomButton
-				currentState={props.currentJoinState}
-				onClick={props.joinRoomHandler}
+				onClick={props.onClick}
 				>
 		        </JoinRoomButton> 
 		</div>

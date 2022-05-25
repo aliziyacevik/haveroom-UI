@@ -1,44 +1,31 @@
 import React, {useState,} from 'react';
 
 import IndexButtons from './components/IndexButtons/IndexButtons';
+import INDEX_STATES from './components/IndexStates/IndexStates';
+
 import RoomInput from './components/JoinRoom/RoomInput';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+/*
+const STATES = {
+	IndexState:		0,
+	JoinBtnClickedState:	1,
+	CreateBtnClickedState:	2,
+};
+*/
+
 function App (props) {
-	const [joinRoom, setJoinRoom] = useState(false);
-	const [createRoom, setCreateRoom] = useState(false);
-	console.log(joinRoom, createRoom);
+	const [indexState, setIndexState] = useState(0);
+	const IndexElementToRender= INDEX_STATES[indexState]; 
 	
-	if (joinRoom) {
-		return (
-			<div>
-				<RoomInput />
-			</div>
-		);
-	}
-	if (createRoom){
-		return (
-			<div>
-				CreateRoom
-			</div>
-		);
-	}
-	if(!joinRoom && !createRoom) {
-		return (
-			<div>
-			  	< IndexButtons
-					currentJoinState={joinRoom}
-					currentCreateState={createRoom}
-					joinRoomHandler = {setJoinRoom} 
-				        createRoomHandler = {setCreateRoom}
-					>
-				</IndexButtons>
-			</div>
-		);
-	}
-
-
+	return (
+		<div>
+			< IndexElementToRender 
+				onClick={setIndexState}
+			/>
+		</div>
+	);
 
 }
 

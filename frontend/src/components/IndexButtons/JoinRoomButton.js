@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button';
 
 function JoinRoomButton (props) {
 	const HandleClick = () => {
-		const nextState= !props.currentState;
-		props.onClick(nextState);
+		const joinRoomState = 1;
+		props.onClick(joinRoomState);
 	}
 	return (
 		<div className="index-btn">

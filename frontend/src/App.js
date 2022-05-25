@@ -1,25 +1,45 @@
-import React from 'react';
+import React, {useState,} from 'react';
 
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import IndexButtons from './components/IndexButtons/IndexButtons';
+import RoomInput from './components/JoinRoom/RoomInput';
 
-
-import IndexButtons from './components/IndexButtons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App (props) {
-	return (
-	  <BrowserRouter>
-   		<Routes>
-     			<Route path="/" element={<IndexButtons />} />
-    		</Routes>
-  	</BrowserRouter>
+	const [joinRoom, setJoinRoom] = useState(false);
+	const [createRoom, setCreateRoom] = useState(false);
+	console.log(joinRoom, createRoom);
 	
+	if (joinRoom) {
+		return (
+			<div>
+				<RoomInput />
+			</div>
+		);
+	}
+	if (createRoom){
+		return (
+			<div>
+				CreateRoom
+			</div>
+		);
+	}
+	if(!joinRoom && !createRoom) {
+		return (
+			<div>
+			  	< IndexButtons
+					currentJoinState={joinRoom}
+					currentCreateState={createRoom}
+					joinRoomHandler = {setJoinRoom} 
+				        createRoomHandler = {setCreateRoom}
+					>
+				</IndexButtons>
+			</div>
+		);
+	}
 
-	);
+
+
 }
 
 export default App;

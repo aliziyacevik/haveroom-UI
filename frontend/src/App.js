@@ -1,9 +1,6 @@
 import React, {useState,} from 'react';
 
-import IndexButtons from './components/IndexButtons/IndexButtons';
 import INDEX_STATES from './components/IndexStates/IndexStates';
-
-import RoomInput from './components/JoinRoom/RoomInput';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

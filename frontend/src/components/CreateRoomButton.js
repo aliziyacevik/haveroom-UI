@@ -8,8 +8,9 @@ function CreateRoomButton(props) {
 		props.onClick(createRoomState);
 	}
 	return (
-        	<div className="index-btn">
-        		<Button 
+        	<div className="create-btn index-btn">
+        		<Button
+				id="index-create-btn"
 				onClick = {HandleClick} 
 				variant="outline-success" 
 				size="lg">					

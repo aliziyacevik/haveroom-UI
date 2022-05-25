@@ -8,8 +8,9 @@ function JoinRoomButton (props) {
 		props.onClick(joinRoomState);
 	}
 	return (
-		<div className="index-btn">
+		<div className="join-btn index-btn">
 			<Button
+				id="index-join-btn"
 				onClick={HandleClick}
 				variant="outline-primary" 
 				size="lg">					
